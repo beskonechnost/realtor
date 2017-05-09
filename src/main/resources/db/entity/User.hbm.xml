@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="db.entity.User" table="users">
+        <meta attribute="class-description">
+            Connect with entity User and table Users
+        </meta>
+        <id name="id" type="int" column="uid">
+            <generator class="identity"/>
+        </id>
+        <property name="name" type="string" column="name"/>
+        <property name="email" type="string" column="email"/>
+        <property name="pass" type="string" column="pass"/>
+        <property name="phone" type="string" column="phone"/>
+        <many-to-one name="roleId" column="role_id" class="db.entity.Role" cascade="save-update"/>
+        <property name="registration" type="boolean" column="registration"/>
+    </class>
+
+</hibernate-mapping>
