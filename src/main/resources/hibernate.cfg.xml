@@ -20,9 +20,9 @@
         <property name="hibernate.connection.provider_class">org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider</property>
 
 
-        <mapping resource="/db/entity/User.hbm.xml"/>
-        <mapping resource="/db/entity/MyObject.hbm.xml"/>
-        <mapping resource="/db/entity/Views.hbm.xml"/>
-        <mapping resource="/db/entity/Role.hbm.xml"/>
+        <mapping resource="/realtorPro/db/entity/User.hbm.xml"/>
+        <mapping resource="/realtorPro/db/entity/MyObject.hbm.xml"/>
+        <mapping resource="/realtorPro/db/entity/Views.hbm.xml"/>
+        <mapping resource="/realtorPro/db/entity/Role.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

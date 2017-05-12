@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="realtorPro.db.entity.Views" table="views">
+        <meta attribute="class-description">
+            Connect with entity Views and table views
+        </meta>
+        <id name="id" type="int" column="uid">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="userId" column="user_id" class="realtorPro.db.entity.User" cascade="save-update"/>
+        <many-to-one name="objectId" column="object_id" class="realtorPro.db.entity.MyObject" cascade="save-update"/>
+        <property name="dateView" type="date" column="date_view"/>
+        <property name="timeView" type="string" column="time_view"/>
+    </class>
+
+</hibernate-mapping>
